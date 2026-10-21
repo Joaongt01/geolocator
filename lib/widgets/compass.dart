@@ -33,8 +33,17 @@ void paint(Canvas canvas, Size size) {
     .. color = Colors.blueAccent
     .. strokeWidth = 3;
 
-canvas.drawCircle(center, radius - 3, circlePaint);
+    canvas.drawCircle(center, radius - 3, circlePaint);
 
-canvas. save();
+    canvas. save();
 
-canvas.translate(center.dx, center.dy);
+    canvas.translate(center.dx, center.dy);
+
+    canvas.rotate(-(90 + heading) * pi / 180);
+
+    final tickPaint = Paint()..strokeWidth = 2;
+
+
+    for (int degree = 0; degree < 360; degree +=5) {
+      final angle = degree
+    }
